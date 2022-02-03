@@ -7,17 +7,17 @@ const myArray = [
 
     bici1 = {
         nome: 'thunder',
-        peso: '2kg'
+        pesoKg: '2'
     },
 
     bici2 = {
         nome: 'bolt',
-        peso: '1,8kg'
+        pesoKg: '1.8'
     },
 
     bici3 = {
         nome: 'lightening',
-        peso: '1,7'
+        pesoKg: '1.7'
     }
 
     
@@ -29,8 +29,18 @@ console.log(bici3);
 
 // Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
 
-function biciPiuLeggera ({nome, peso}) {
-    console.log(`Il nome è: ${nome}. Il peso è: ${peso}`);
+function biciPiuLeggera ({nome, pesoKg}) {
+    console.log(`Il nome è: ${nome}. Il peso è: ${pesoKg}`);
+
+    let pesoMinore = ''
+
+    for (let i = 0; i < myArray.lenght; i++) {
+        if (myArray[i].pesoKg < 1.8) {
+            pesoKg = pesoMinore;
+        }
+    };
+    return pesoMinore;
+    
 }
 
-biciPiuLeggera(bici3);
+biciPiuLeggera(pesoMinore);

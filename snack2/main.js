@@ -31,12 +31,17 @@ console.log(myArray);
 // Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
 
 
-let varPunti = Math.floor(Math.random()*10) + 1;
+
+let varPunti = Math.floor(Math.random()*50) + 1;
 console.log(varPunti);
 
-let varFalliSubiti = Math.floor(Math.random()*10) + 1;
+let varFalliSubiti = Math.floor(Math.random()*50) + 1;
 console.log(varFalliSubiti);
 
-
+for (let i = 0; i < myArray.length; i++) {
+    console.log(i);
+    
+    
+}
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console. 
 
