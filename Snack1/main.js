@@ -29,3 +29,8 @@ console.log(bici3);
 
 // Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
 
+function biciPiuLeggera ({nome, peso}) {
+    console.log(`Il nome è: ${nome}. Il peso è: ${peso}`);
+}
+
+biciPiuLeggera(bici3);
