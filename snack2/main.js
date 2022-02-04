@@ -4,19 +4,19 @@
 
 
 const myArray = [
-    squadra1 = {
+    {
         nome: 'FCMilan',
         punti: 0,
         falliSubiti: 0
     },
 
-    squadra2 = {
+    {
         nome: 'Napoli',
         punti: 0,
         falliSubiti: 0
     },
 
-    squadra3 = {
+    {
         nome: 'ASRoma',
         punti: 0,
         falliSubiti: 0
@@ -32,16 +32,38 @@ console.log(myArray);
 
 
 
-let varPunti = Math.floor(Math.random()*50) + 1;
-console.log(varPunti);
+for (let i = 0; i < myArray.length; i++) {
+    myArray[i].punti = Math.floor(Math.random()*50)
+    myArray[i].falliSubiti = Math.floor(Math.random()*50)
+}
+console.log(myArray);
+// Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console. 
 
-let varFalliSubiti = Math.floor(Math.random()*50) + 1;
-console.log(varFalliSubiti);
+// creare un nuovo array vuoto
+
+let arrayNomiEFalliSubiti = [];
+
+// ciclo myArray
+//all'int del ciclo faccio destr. elem. iesimo
+//push. di destruttur. fatta nell'array nuovo
+
 
 for (let i = 0; i < myArray.length; i++) {
-    console.log(i);
-    
-    
+    let team = myArray[i];
+    const {nome, falliSubiti} = team;
+    console.log(nome, falliSubiti);
+    arrayNomiEFalliSubiti.push({nome, falliSubiti});
 }
-// Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console. 
+
+console.log(arrayNomiEFalliSubiti);
+
+
+
+
+
+
+
+
+
+
 

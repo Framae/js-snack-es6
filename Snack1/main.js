@@ -23,24 +23,48 @@ const myArray = [
     
 ];
 
+const yourArray = [
+
+
+    {
+        nome: 'treno',
+        pesoKg: '6'
+    },
+
+    {
+        nome: 'bolide',
+        pesoKg: '7'
+    },
+
+    {
+        nome: 'biciDiDonMatteo',
+        pesoKg: '8'
+    }
+
+    
+];
+
 console.log(myArray);
 
 
 // Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
 
-function biciPiuLeggera ({nome, pesoKg}) {
+function biciPiuLeggera(array) {
     
 
-    let biciLeggera = myArray[0];
+    let biciLeggera = array[0];
 
-    for (let i = 0; i < myArray.length; i++) {
-        if (myArray[i].pesoKg < biciLeggera.pesoKg) {
-            biciLeggera = myArray[i]
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].pesoKg < biciLeggera.pesoKg) {
+            biciLeggera = array[i];
         }
     };
     return biciLeggera;
-}
+};
 
-const {nome, pesoKg} = biciPiuLeggera(myArray);
+let {nome, pesoKg} = biciPiuLeggera(myArray);
 console.log(`Il nome è: ${nome}. Il peso è: ${pesoKg}`);
-// biciPiuLeggera(pesoMinore);
+let bici = biciPiuLeggera(yourArray);
+nome = bici.nome;
+pesoKg = bici.pesoKg;
+console.log(`Il nome è: ${nome}. Il peso è: ${pesoKg}`);
