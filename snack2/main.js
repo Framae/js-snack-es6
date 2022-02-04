@@ -44,12 +44,12 @@ console.log(myArray);
 let arrayNomiEFalliSubiti = [];
 
 // ciclo myArray
-//all'int del ciclo faccio destr. elem. iesimo
+//all'int del ciclo faccio destrutt. elem. iesimo
 //push. di destruttur. fatta nell'array nuovo
 
 
 for (let i = 0; i < myArray.length; i++) {
-    let team = myArray[i];
+    const team = myArray[i];
     const {nome, falliSubiti} = team;
     console.log(nome, falliSubiti);
     arrayNomiEFalliSubiti.push({nome, falliSubiti});
