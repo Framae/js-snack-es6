@@ -5,42 +5,42 @@ Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e pe
 const myArray = [
 
 
-    bici1 = {
+    {
         nome: 'thunder',
-        pesoKg: '2'
+        pesoKg: '5'
     },
 
-    bici2 = {
+    {
         nome: 'bolt',
-        pesoKg: '1.8'
+        pesoKg: '4'
     },
 
-    bici3 = {
+    {
         nome: 'lightening',
-        pesoKg: '1.7'
+        pesoKg: '3'
     }
 
     
 ];
 
-console.log(bici1);
-console.log(bici2);
-console.log(bici3);
+console.log(myArray);
+
 
 // Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
 
 function biciPiuLeggera ({nome, pesoKg}) {
-    console.log(`Il nome è: ${nome}. Il peso è: ${pesoKg}`);
+    
 
-    let pesoMinore = ''
+    let biciLeggera = myArray[0];
 
-    for (let i = 0; i < myArray.lenght; i++) {
-        if (myArray[i].pesoKg < 1.8) {
-            pesoKg = pesoMinore;
+    for (let i = 0; i < myArray.length; i++) {
+        if (myArray[i].pesoKg < biciLeggera.pesoKg) {
+            biciLeggera = myArray[i]
         }
     };
-    return pesoMinore;
-    
+    return biciLeggera;
 }
 
-biciPiuLeggera(pesoMinore);
+const {nome, pesoKg} = biciPiuLeggera(myArray);
+console.log(`Il nome è: ${nome}. Il peso è: ${pesoKg}`);
+// biciPiuLeggera(pesoMinore);
